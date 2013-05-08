@@ -1,5 +1,4 @@
-superclass = defined?(Spree::BaseMailer) ? Spree::BaseMailer : ActionMailer::Base
-class Spree::UserMailer < superclass
+class Spree::UserMailer < Spree::BaseMailer
   def reset_password_instructions(user)
     @edit_password_reset_url = spree.edit_spree_user_password_url(:reset_password_token => user.reset_password_token)
 
